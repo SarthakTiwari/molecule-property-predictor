@@ -1,0 +1,16 @@
+name: root
+channels:
+- conda-forge
+- defaults
+dependencies:
+- flask
+- gunicorn
+- numpy
+- random
+- torch
+- python
+- rdkit
+- pytorch_lightning
+- sklearn
+- math
+- collections

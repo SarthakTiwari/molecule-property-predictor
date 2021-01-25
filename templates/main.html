@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<style>
+body {
+  background: url("/static/images/background.jpg") no-repeat center fixed;
+  background-size: cover;
+
+
+
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+legend {
+  
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+
+form {
+    margin: auto;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+.result {
+    margin: auto;
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+}
+</style>
+<head>
+    <title>Molecule property prediction</title>
+</head>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        SMILES:
+        <input name="SMILES" type="text" placeholder="SMILES" required>
+        <br>
+        <label for="property">CHOOSE A PROPERTY:</label>
+
+        <select name="property" id="property">
+          <option value="hml_clearance">hml clearance</option>
+          <option value="logD">logD</option>
+          <option value="t_half">t half</option>
+        </select>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+<br>
+<div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Predicted Molecule property value:
+      <p style="font-size:40px">{{ result }}</p>
+      <p style="font-weight: bold">Attribution score visualization</p>
+      <img src="data:image/png;base64, {{ plot_url }}">
+      <p style="font-weight: bold">Attribution score scale </p>
+      <img src="/static/images/color_bar.png" alt="color bar">
+      <p>Higher the atoms attribution score higher its contribution to molecule property</p>
+    {% endif %}
+</div>
+</html>
+
