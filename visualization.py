@@ -9,7 +9,7 @@ import matplotlib.cm as cm
 
 
 from io import BytesIO
-from PIL import Image
+
 from IPython.display import display
 import base64
 
