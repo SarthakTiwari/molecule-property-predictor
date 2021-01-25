@@ -74,9 +74,7 @@ def visualizations(model,smile,color_map= plt.cm.bwr):
     attr= ig.attribute(nodes,additional_forward_args= (edges,adjacency),target=0 )
 
     attr1=torch.squeeze(attr, dim=0)
-    attr2=attr1.sum(dim=1)
-    vmax = max(attr2.abs().max(), 1e-16)
-    vmin = -vmax
+ 
 
     node_colors = get_colors(attr1, color_map)
     node_colors=node_colors[:,:3]

@@ -6,6 +6,7 @@ dependencies:
 - flask
 - gunicorn
 - numpy
+- pandas
 - random
 - torch
 - python
@@ -14,3 +15,9 @@ dependencies:
 - sklearn
 - math
 - collections
+- matplotlib
+- io
+- PIL
+- IPython
+- base64
+- captum
