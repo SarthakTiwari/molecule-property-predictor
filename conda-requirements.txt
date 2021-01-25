@@ -1,3 +1,6 @@
+conda
+conda-env
+requests
 absl-py=0.11.0=pypi_0
 aiohttp=3.7.3=pypi_0
 async-timeout=3.0.1=pypi_0
