@@ -7,4 +7,4 @@ matplotlib
 numpy==1.19.5
 scikit-learn==0.24.1
 pytorch_lightning
-torch==1.7.1
+http://download.pytorch.org/whl/cpu/torch-1.4.0%2Bcpu-cp37-cp37m-linux_x86_64.whl
