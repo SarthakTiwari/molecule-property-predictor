@@ -8,8 +8,8 @@ COPY . /app
 
 WORKDIR /app
 
-RUN conda env update -f environment.yml && \
-    rm -rf /tmp/* && conda clean --all --yes
+RUN conda env update -f environment.yml && conda clean --all -f --yes
+
 
 RUN echo "source activate env" > ~/.bashrc
 ENV PATH /opt/conda/envs/env/bin:$PATH
