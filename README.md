@@ -48,12 +48,12 @@ flask run
 Browse to the address you see on your terminal
 
 you should see something like this:
-[]: './static/images/Screenshot_1.png'
+![main.html](./static/images/Screenshot_1.png)
 
 
 After submiting SMILES and property of interest
 you should see:
-[]: './static/images/screenshot_2.png'
+![result](./static/images/screenshot_2.png')
 
 To deploy on Heroku
 (make sure you have heroku CLI installed)
