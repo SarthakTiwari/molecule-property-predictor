@@ -55,10 +55,18 @@ After submiting SMILES and property of interest
 you should see:
 ![result](./static/images/screenshot_2.png)
 
-To deploy on Heroku
-(make sure you have heroku CLI installed)
+To deploy on Heroku using git
+
 ```
-heroku container:login
-heroku container:push web --app webapp
-heroku container:release web --app webapp
+git init 
+git add .
+git commit -m "Initial Commit"
+
+```
+(make sure you have heroku CLI installed)
+
+```
+heroku login
+heroku create webapp
+git push heroku master
 ```
