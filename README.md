@@ -53,7 +53,7 @@ you should see something like this:
 
 After submiting SMILES and property of interest
 you should see:
-![result](./static/images/screenshot_2.png')
+![result](./static/images/screenshot_2.png)
 
 To deploy on Heroku
 (make sure you have heroku CLI installed)
