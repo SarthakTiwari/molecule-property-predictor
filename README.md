@@ -56,7 +56,7 @@ you should see:
 ![result](./static/images/screenshot_2.png)
 
 To deploy on Heroku using git
-
+(Be sure to initialize the Git repository in app’s root directory)
 ```
 git init 
 git add .
