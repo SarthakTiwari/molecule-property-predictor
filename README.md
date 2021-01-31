@@ -55,18 +55,4 @@ After submiting SMILES and property of interest
 you should see:
 ![result](./static/images/screenshot_2.png)
 
-To deploy on Heroku using git
-(Be sure to initialize the Git repository in app’s root directory)
-```
-git init 
-git add .
-git commit -m "Initial Commit"
-
-```
-(make sure you have heroku CLI installed)
-
-```
-heroku login
-heroku create webapp
-git push heroku master
-```
+To deploy on Heroku use a conda buildpack
